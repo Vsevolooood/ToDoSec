@@ -1,0 +1,16 @@
+-I
+C:/msys64/home/ESA20/1111/kotlin-dialect-example/helloworld/ver-windows-x64/build
+-I
+C:/msys64/home/ESA20/1111/kotlin-dialect-example/helloworld/ver-windows-x64/build/helloworld
+-I
+C:/msys64/home/ESA20/1111/kotlin-dialect-example/helloworld/ver-windows-x64/build
+-I
+C:/msys64/mingw64/share/qt6/qml
+--resource
+C:/msys64/home/ESA20/1111/kotlin-dialect-example/helloworld/ver-windows-x64/build/.qt/rcc/qmake_helloworld.qrc
+--resource
+C:/msys64/home/ESA20/1111/kotlin-dialect-example/helloworld/ver-windows-x64/build/.qt/rcc/hwW64_raw_qml_0.qrc
+--resource
+C:/msys64/home/ESA20/1111/kotlin-dialect-example/helloworld/ver-windows-x64/build/.qt/rcc/hwW64_raw_qml_0_extra_qmldirs.qrc
+--module
+helloworld

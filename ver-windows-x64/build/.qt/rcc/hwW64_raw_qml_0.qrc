@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="/qt/qml/helloworld/">
+    <file alias="src/AppView.qml">C:/msys64/home/ESA20/1111/kotlin-dialect-example/helloworld/ver-windows-x64/src/AppView.qml</file>
+    <file alias="src/main/MainView.qml">C:/msys64/home/ESA20/1111/kotlin-dialect-example/helloworld/ver-windows-x64/src/main/MainView.qml</file>
+  </qresource>
+</RCC>
+

@@ -1,0 +1,7 @@
+module helloworld
+typeinfo hwW64.qmltypes
+prefer :/qt/qml/helloworld/
+AppView 254.0 src/AppView.qml
+MainView 254.0 src/main/MainView.qml
+depends QtQuick
+

@@ -1,0 +1,15 @@
+-rootPath
+C:/msys64/home/ESA20/1111/kotlin-dialect-example/helloworld/ver-windows-x64
+-cmake-output
+-output-file
+C:/msys64/home/ESA20/1111/kotlin-dialect-example/helloworld/ver-windows-x64/build/.qt/qml_imports/hwW64_build.cmake
+-importPath
+C:/msys64/home/ESA20/1111/kotlin-dialect-example/helloworld/ver-windows-x64/build
+-importPath
+C:/msys64/home/ESA20/1111/kotlin-dialect-example/helloworld/ver-windows-x64/build/helloworld
+-importPath
+C:/msys64/mingw64/share/qt6/qml
+-qrcFiles
+C:/msys64/home/ESA20/1111/kotlin-dialect-example/helloworld/ver-windows-x64/build/.qt/rcc/qmake_helloworld.qrc
+C:/msys64/home/ESA20/1111/kotlin-dialect-example/helloworld/ver-windows-x64/build/.qt/rcc/hwW64_raw_qml_0.qrc
+C:/msys64/home/ESA20/1111/kotlin-dialect-example/helloworld/ver-windows-x64/build/.qt/rcc/hwW64_raw_qml_0_extra_qmldirs.qrc

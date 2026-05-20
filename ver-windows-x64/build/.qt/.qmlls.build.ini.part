@@ -1,0 +1,3 @@
+[C:<SLASH>msys64<SLASH>home<SLASH>ESA20<SLASH>1111<SLASH>kotlin-dialect-example<SLASH>helloworld<SLASH>ver-windows-x64]
+importPaths="C:/msys64/home/ESA20/1111/kotlin-dialect-example/helloworld/ver-windows-x64/build;C:/msys64/home/ESA20/1111/kotlin-dialect-example/helloworld/ver-windows-x64/build/helloworld;C:/msys64/mingw64/share/qt6/qml"
+resourceFiles="C:/msys64/home/ESA20/1111/kotlin-dialect-example/helloworld/ver-windows-x64/build/.qt/rcc/qmake_helloworld.qrc;C:/msys64/home/ESA20/1111/kotlin-dialect-example/helloworld/ver-windows-x64/build/.qt/rcc/hwW64_raw_qml_0.qrc;C:/msys64/home/ESA20/1111/kotlin-dialect-example/helloworld/ver-windows-x64/build/.qt/rcc/hwW64_raw_qml_0_extra_qmldirs.qrc"

@@ -1,0 +1,5 @@
+# Project exclude paths
+/sdk-windows-x64/.gradle/
+/sdk-windows-x64/build/
+/sdk-windows-x64/hw/build/
+/sdk-windows-x64/hw/build/classes/kotlin/native/main/klib/

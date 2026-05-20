@@ -1,0 +1,8 @@
+--resource
+C:/msys64/home/ESA20/1111/kotlin-dialect-example/helloworld/ver-windows-x64/build/.qt/rcc/qmake_helloworld.qrc
+--resource
+C:/msys64/home/ESA20/1111/kotlin-dialect-example/helloworld/ver-windows-x64/build/.qt/rcc/hwW64_raw_qml_0.qrc
+--resource
+C:/msys64/home/ESA20/1111/kotlin-dialect-example/helloworld/ver-windows-x64/build/.qt/rcc/hwW64_raw_qml_0_extra_qmldirs.qrc
+/qt/qml/helloworld/src/AppView.qml
+/qt/qml/helloworld/src/main/MainView.qml

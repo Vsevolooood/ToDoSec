@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/qt/qml/helloworld">
+    <file alias="qmldir">C:/msys64/home/ESA20/1111/kotlin-dialect-example/helloworld/ver-windows-x64/build/helloworld/qmldir</file>
+  </qresource>
+</RCC>
+

@@ -1,0 +1,5 @@
+-DWIN32
+-o
+C:/msys64/home/ESA20/1111/kotlin-dialect-example/helloworld/ver-windows-x64/build/src/moc_ignore.kd.cpp
+C:/msys64/home/ESA20/1111/kotlin-dialect-example/helloworld/ver-windows-x64/src/ignore.kd.h
+-DWIN32
