@@ -39,39 +39,75 @@ template <> constexpr inline auto VM::qt_create_metaobjectdata<qt_meta_tag_ZN2VM
     namespace QMC = QtMocConstants;
     QtMocHelpers::StringRefStorage qt_stringData {
         "VM",
-        "mainDidChangeGreetingText",
+        "mainDidChangeIsVisible",
         "",
         "value",
-        "mainDidChangeIsVisible",
-        "mainSetGreetingText",
+        "mainDidChangeTaskTitle",
+        "tasksChanged",
         "mainSetIsVisible",
-        "mainGreetingText",
-        "mainIsVisible"
+        "mainSetTaskTitle",
+        "mainSettaskTitle",
+        "addTask",
+        "task",
+        "addAllTasks",
+        "tasks",
+        "std::vector<std::string>",
+        "removeTask",
+        "index",
+        "clearTasks",
+        "mainIsVisible",
+        "mainTaskTitle"
     };
 
     QtMocHelpers::UintData qt_methods {
-        // Signal 'mainDidChangeGreetingText'
-        QtMocHelpers::SignalData<void(const QString &)>(1, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::QString, 3 },
-        }}),
         // Signal 'mainDidChangeIsVisible'
-        QtMocHelpers::SignalData<void(bool)>(4, 2, QMC::AccessPublic, QMetaType::Void, {{
+        QtMocHelpers::SignalData<void(bool)>(1, 2, QMC::AccessPublic, QMetaType::Void, {{
             { QMetaType::Bool, 3 },
         }}),
-        // Slot 'mainSetGreetingText'
-        QtMocHelpers::SlotData<void(const QString &)>(5, 2, QMC::AccessPublic, QMetaType::Void, {{
+        // Signal 'mainDidChangeTaskTitle'
+        QtMocHelpers::SignalData<void(const QString &)>(4, 2, QMC::AccessPublic, QMetaType::Void, {{
             { QMetaType::QString, 3 },
         }}),
+        // Signal 'tasksChanged'
+        QtMocHelpers::SignalData<void()>(5, 2, QMC::AccessPublic, QMetaType::Void),
         // Slot 'mainSetIsVisible'
         QtMocHelpers::SlotData<void(bool)>(6, 2, QMC::AccessPublic, QMetaType::Void, {{
             { QMetaType::Bool, 3 },
         }}),
+        // Slot 'mainSetTaskTitle'
+        QtMocHelpers::SlotData<void(const QString &)>(7, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 3 },
+        }}),
+        // Slot 'mainSettaskTitle'
+        QtMocHelpers::SlotData<void(const QString &)>(8, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 3 },
+        }}),
+        // Slot 'addTask'
+        QtMocHelpers::SlotData<void(const QString &)>(9, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 10 },
+        }}),
+        // Slot 'addAllTasks'
+        QtMocHelpers::SlotData<void(const QStringList &)>(11, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QStringList, 12 },
+        }}),
+        // Slot 'addAllTasks'
+        QtMocHelpers::SlotData<void(const std::vector<std::string> &)>(11, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { 0x80000000 | 13, 12 },
+        }}),
+        // Slot 'removeTask'
+        QtMocHelpers::SlotData<void(int)>(14, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::Int, 15 },
+        }}),
+        // Slot 'clearTasks'
+        QtMocHelpers::SlotData<void()>(16, 2, QMC::AccessPublic, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
-        // property 'mainGreetingText'
-        QtMocHelpers::PropertyData<QString>(7, QMetaType::QString, QMC::DefaultPropertyFlags | QMC::Writable, 0),
         // property 'mainIsVisible'
-        QtMocHelpers::PropertyData<bool>(8, QMetaType::Bool, QMC::DefaultPropertyFlags | QMC::Writable, 1),
+        QtMocHelpers::PropertyData<bool>(17, QMetaType::Bool, QMC::DefaultPropertyFlags | QMC::Writable, 0),
+        // property 'mainTaskTitle'
+        QtMocHelpers::PropertyData<QString>(18, QMetaType::QString, QMC::DefaultPropertyFlags | QMC::Writable, 1),
+        // property 'tasks'
+        QtMocHelpers::PropertyData<QStringList>(12, QMetaType::QStringList, QMC::DefaultPropertyFlags, 2),
     };
     QtMocHelpers::UintData qt_enums {
     };
@@ -93,32 +129,42 @@ void VM::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_
     auto *_t = static_cast<VM *>(_o);
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: _t->mainDidChangeGreetingText((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
-        case 1: _t->mainDidChangeIsVisible((*reinterpret_cast<std::add_pointer_t<bool>>(_a[1]))); break;
-        case 2: _t->mainSetGreetingText((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
+        case 0: _t->mainDidChangeIsVisible((*reinterpret_cast<std::add_pointer_t<bool>>(_a[1]))); break;
+        case 1: _t->mainDidChangeTaskTitle((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
+        case 2: _t->tasksChanged(); break;
         case 3: _t->mainSetIsVisible((*reinterpret_cast<std::add_pointer_t<bool>>(_a[1]))); break;
+        case 4: _t->mainSetTaskTitle((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
+        case 5: _t->mainSettaskTitle((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
+        case 6: _t->addTask((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
+        case 7: _t->addAllTasks((*reinterpret_cast<std::add_pointer_t<QStringList>>(_a[1]))); break;
+        case 8: _t->addAllTasks((*reinterpret_cast<std::add_pointer_t<std::vector<std::string>>>(_a[1]))); break;
+        case 9: _t->removeTask((*reinterpret_cast<std::add_pointer_t<int>>(_a[1]))); break;
+        case 10: _t->clearTasks(); break;
         default: ;
         }
     }
     if (_c == QMetaObject::IndexOfMethod) {
-        if (QtMocHelpers::indexOfMethod<void (VM::*)(const QString & )>(_a, &VM::mainDidChangeGreetingText, 0))
+        if (QtMocHelpers::indexOfMethod<void (VM::*)(bool )>(_a, &VM::mainDidChangeIsVisible, 0))
             return;
-        if (QtMocHelpers::indexOfMethod<void (VM::*)(bool )>(_a, &VM::mainDidChangeIsVisible, 1))
+        if (QtMocHelpers::indexOfMethod<void (VM::*)(const QString & )>(_a, &VM::mainDidChangeTaskTitle, 1))
+            return;
+        if (QtMocHelpers::indexOfMethod<void (VM::*)()>(_a, &VM::tasksChanged, 2))
             return;
     }
     if (_c == QMetaObject::ReadProperty) {
         void *_v = _a[0];
         switch (_id) {
-        case 0: *reinterpret_cast<QString*>(_v) = _t->mainGreetingText(); break;
-        case 1: *reinterpret_cast<bool*>(_v) = _t->mainIsVisible(); break;
+        case 0: *reinterpret_cast<bool*>(_v) = _t->mainIsVisible(); break;
+        case 1: *reinterpret_cast<QString*>(_v) = _t->mainTaskTitle(); break;
+        case 2: *reinterpret_cast<QStringList*>(_v) = _t->tasks(); break;
         default: break;
         }
     }
     if (_c == QMetaObject::WriteProperty) {
         void *_v = _a[0];
         switch (_id) {
-        case 0: _t->mainSetGreetingText(*reinterpret_cast<QString*>(_v)); break;
-        case 1: _t->mainSetIsVisible(*reinterpret_cast<bool*>(_v)); break;
+        case 0: _t->mainSetIsVisible(*reinterpret_cast<bool*>(_v)); break;
+        case 1: _t->mainSetTaskTitle(*reinterpret_cast<QString*>(_v)); break;
         default: break;
         }
     }
@@ -143,33 +189,39 @@ int VM::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 11)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 11;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 4)
+        if (_id < 11)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 4;
+        _id -= 11;
     }
     if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
             || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty
             || _c == QMetaObject::RegisterPropertyMetaType) {
         qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 3;
     }
     return _id;
 }
 
 // SIGNAL 0
-void VM::mainDidChangeGreetingText(const QString & _t1)
+void VM::mainDidChangeIsVisible(bool _t1)
 {
     QMetaObject::activate<void>(this, &staticMetaObject, 0, nullptr, _t1);
 }
 
 // SIGNAL 1
-void VM::mainDidChangeIsVisible(bool _t1)
+void VM::mainDidChangeTaskTitle(const QString & _t1)
 {
     QMetaObject::activate<void>(this, &staticMetaObject, 1, nullptr, _t1);
+}
+
+// SIGNAL 2
+void VM::tasksChanged()
+{
+    QMetaObject::activate(this, &staticMetaObject, 2, nullptr);
 }
 QT_WARNING_POP

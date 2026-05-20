@@ -5,24 +5,36 @@ import kotlinx.cinterop.*
 
 
 data class MainContext(
-    var didClickChangeText: Boolean = false,
+    var didClickSaveText: Boolean = false,
     var didLaunch: Boolean = false,
+    var didSelectTask: String = "",
     var didSetup: Boolean = false,
-    var greetingText: String = "",
     var isVisible: Boolean = false,
+    var saveString: String = "",
+    var shouldSavaTasks: Boolean = false,
+    var taskTitle: String = "",
+    var tasks: Array<String> = arrayOf(),
     override var recentField: String = "",
 ): KDContext {
     override fun <T> field(name: String): T {
-        if (name == "didClickChangeText") {
-            return didClickChangeText as T
+        if (name == "didClickSaveText") {
+            return didClickSaveText as T
         } else if (name == "didLaunch") {
             return didLaunch as T
+        } else if (name == "didSelectTask") {
+            return didSelectTask as T
         } else if (name == "didSetup") {
             return didSetup as T
-        } else if (name == "greetingText") {
-            return greetingText as T
         } else if (name == "isVisible") {
             return isVisible as T
+        } else if (name == "saveString") {
+            return saveString as T
+        } else if (name == "shouldSavaTasks") {
+            return shouldSavaTasks as T
+        } else if (name == "taskTitle") {
+            return taskTitle as T
+        } else if (name == "tasks") {
+            return tasks as T
         }
         return "unknown-field-name" as T
     }
@@ -35,16 +47,24 @@ data class MainContext(
         name: String,
         value: Any?
     ) {
-        if (name == "didClickChangeText") {
-            didClickChangeText = value as Boolean
+        if (name == "didClickSaveText") {
+            didClickSaveText = value as Boolean
         } else if (name == "didLaunch") {
             didLaunch = value as Boolean
+        } else if (name == "didSelectTask") {
+            didSelectTask = value as String
         } else if (name == "didSetup") {
             didSetup = value as Boolean
-        } else if (name == "greetingText") {
-            greetingText = value as String
         } else if (name == "isVisible") {
             isVisible = value as Boolean
+        } else if (name == "saveString") {
+            saveString = value as String
+        } else if (name == "shouldSavaTasks") {
+            shouldSavaTasks = value as Boolean
+        } else if (name == "taskTitle") {
+            taskTitle = value as String
+        } else if (name == "tasks") {
+            tasks = value as Array<String>
         }
     }
 }
@@ -205,12 +225,16 @@ fun registerOneliners(
 // Special object to reference context fields with a compile time validation
 
 object F {
-    const val didClickChangeText = "didClickChangeText"
+    const val didClickSaveText = "didClickSaveText"
     const val didLaunch = "didLaunch"
+    const val didSelectTask = "didSelectTask"
     const val didSetup = "didSetup"
-    const val greetingText = "greetingText"
     const val isVisible = "isVisible"
     const val none = "none"
+    const val saveString = "saveString"
+    const val shouldSavaTasks = "shouldSavaTasks"
+    const val taskTitle = "taskTitle"
+    const val tasks = "tasks"
 
 }
 

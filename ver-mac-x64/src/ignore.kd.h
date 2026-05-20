@@ -24,15 +24,21 @@ class MainContext {
         MainContext(KTRef(MainContext) ctx): ctx(ctx) { }
 
 
-        bool didClickChangeText();
+        bool didClickSaveText();
 
         bool didLaunch();
 
+        QString didSelectTask() const &;
+
         bool didSetup();
 
-        QString greetingText() const &;
-
         bool isVisible();
+
+        QString saveString() const &;
+
+        bool shouldSavaTasks();
+
+        QString taskTitle() const &;
 
 
     private:
@@ -53,12 +59,16 @@ class MainEffectRegistry {
 
 // Special structure to reference keys with a compile time check
 struct FStruct {
-    static inline constexpr const char *didClickChangeText = "didClickChangeText";
+    static inline constexpr const char *didClickSaveText = "didClickSaveText";
     static inline constexpr const char *didLaunch = "didLaunch";
+    static inline constexpr const char *didSelectTask = "didSelectTask";
     static inline constexpr const char *didSetup = "didSetup";
-    static inline constexpr const char *greetingText = "greetingText";
     static inline constexpr const char *isVisible = "isVisible";
     static inline constexpr const char *none = "none";
+    static inline constexpr const char *saveString = "saveString";
+    static inline constexpr const char *shouldSavaTasks = "shouldSavaTasks";
+    static inline constexpr const char *taskTitle = "taskTitle";
+    static inline constexpr const char *tasks = "tasks";
 
 };
 inline FStruct F;
@@ -66,22 +76,30 @@ inline FStruct F;
 // Special structure to reference keys in QML
 class FObj: public QObject {
     Q_OBJECT
-    Q_PROPERTY(QString didClickChangeText READ key_didClickChangeText CONSTANT)
+    Q_PROPERTY(QString didClickSaveText READ key_didClickSaveText CONSTANT)
     Q_PROPERTY(QString didLaunch READ key_didLaunch CONSTANT)
+    Q_PROPERTY(QString didSelectTask READ key_didSelectTask CONSTANT)
     Q_PROPERTY(QString didSetup READ key_didSetup CONSTANT)
-    Q_PROPERTY(QString greetingText READ key_greetingText CONSTANT)
     Q_PROPERTY(QString isVisible READ key_isVisible CONSTANT)
     Q_PROPERTY(QString none READ key_none CONSTANT)
+    Q_PROPERTY(QString saveString READ key_saveString CONSTANT)
+    Q_PROPERTY(QString shouldSavaTasks READ key_shouldSavaTasks CONSTANT)
+    Q_PROPERTY(QString taskTitle READ key_taskTitle CONSTANT)
+    Q_PROPERTY(QString tasks READ key_tasks CONSTANT)
 
 
     public:
         FObj(): QObject() { }
-        QString key_didClickChangeText() const { return F.didClickChangeText; }
+        QString key_didClickSaveText() const { return F.didClickSaveText; }
         QString key_didLaunch() const { return F.didLaunch; }
+        QString key_didSelectTask() const { return F.didSelectTask; }
         QString key_didSetup() const { return F.didSetup; }
-        QString key_greetingText() const { return F.greetingText; }
         QString key_isVisible() const { return F.isVisible; }
         QString key_none() const { return F.none; }
+        QString key_saveString() const { return F.saveString; }
+        QString key_shouldSavaTasks() const { return F.shouldSavaTasks; }
+        QString key_taskTitle() const { return F.taskTitle; }
+        QString key_tasks() const { return F.tasks; }
 
 };
 

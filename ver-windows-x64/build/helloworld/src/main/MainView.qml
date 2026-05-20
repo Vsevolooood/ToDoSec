@@ -11,7 +11,6 @@ Rectangle {
         anchors.fill: parent
         anchors.margins: 16
 
-        // Строка ввода сверху и во всю ширину
         TextField {
             id: taskInput
 
@@ -19,17 +18,25 @@ Rectangle {
             Layout.alignment: Qt.AlignTop
 
             placeholderText: "Задача"
-
-            // Чтение из VM
             text: vm.mainTaskTitle
-
-            // Запись через mainSet()
             onTextChanged: {
                 api.mainSet(F.taskTitle, text)
             }
 
             onAccepted: {
-                api.mainSet(F.didClickSaveText, true)
+                onAccepted: {
+                    api.mainSet(F.didClickSaveText, true)
+
+ for (let i = 0; i < vm.tasks.length; ++i) {
+        let t = vm.tasks[i]
+
+        console.log(
+            "id:", t.id,
+            "title:", t.title,
+            "done:", t.isDone
+        )
+    }
+                }
             }
         }
     }

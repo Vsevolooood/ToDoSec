@@ -119,29 +119,41 @@ template <> constexpr inline auto FObj::qt_create_metaobjectdata<qt_meta_tag_ZN4
     namespace QMC = QtMocConstants;
     QtMocHelpers::StringRefStorage qt_stringData {
         "FObj",
-        "didClickChangeText",
+        "didClickSaveText",
         "didLaunch",
+        "didSelectTask",
         "didSetup",
-        "greetingText",
         "isVisible",
-        "none"
+        "none",
+        "saveString",
+        "shouldSavaTasks",
+        "taskTitle",
+        "tasks"
     };
 
     QtMocHelpers::UintData qt_methods {
     };
     QtMocHelpers::UintData qt_properties {
-        // property 'didClickChangeText'
+        // property 'didClickSaveText'
         QtMocHelpers::PropertyData<QString>(1, QMetaType::QString, QMC::DefaultPropertyFlags | QMC::Constant),
         // property 'didLaunch'
         QtMocHelpers::PropertyData<QString>(2, QMetaType::QString, QMC::DefaultPropertyFlags | QMC::Constant),
-        // property 'didSetup'
+        // property 'didSelectTask'
         QtMocHelpers::PropertyData<QString>(3, QMetaType::QString, QMC::DefaultPropertyFlags | QMC::Constant),
-        // property 'greetingText'
+        // property 'didSetup'
         QtMocHelpers::PropertyData<QString>(4, QMetaType::QString, QMC::DefaultPropertyFlags | QMC::Constant),
         // property 'isVisible'
         QtMocHelpers::PropertyData<QString>(5, QMetaType::QString, QMC::DefaultPropertyFlags | QMC::Constant),
         // property 'none'
         QtMocHelpers::PropertyData<QString>(6, QMetaType::QString, QMC::DefaultPropertyFlags | QMC::Constant),
+        // property 'saveString'
+        QtMocHelpers::PropertyData<QString>(7, QMetaType::QString, QMC::DefaultPropertyFlags | QMC::Constant),
+        // property 'shouldSavaTasks'
+        QtMocHelpers::PropertyData<QString>(8, QMetaType::QString, QMC::DefaultPropertyFlags | QMC::Constant),
+        // property 'taskTitle'
+        QtMocHelpers::PropertyData<QString>(9, QMetaType::QString, QMC::DefaultPropertyFlags | QMC::Constant),
+        // property 'tasks'
+        QtMocHelpers::PropertyData<QString>(10, QMetaType::QString, QMC::DefaultPropertyFlags | QMC::Constant),
     };
     QtMocHelpers::UintData qt_enums {
     };
@@ -164,12 +176,16 @@ void FObj::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void *
     if (_c == QMetaObject::ReadProperty) {
         void *_v = _a[0];
         switch (_id) {
-        case 0: *reinterpret_cast<QString*>(_v) = _t->key_didClickChangeText(); break;
+        case 0: *reinterpret_cast<QString*>(_v) = _t->key_didClickSaveText(); break;
         case 1: *reinterpret_cast<QString*>(_v) = _t->key_didLaunch(); break;
-        case 2: *reinterpret_cast<QString*>(_v) = _t->key_didSetup(); break;
-        case 3: *reinterpret_cast<QString*>(_v) = _t->key_greetingText(); break;
+        case 2: *reinterpret_cast<QString*>(_v) = _t->key_didSelectTask(); break;
+        case 3: *reinterpret_cast<QString*>(_v) = _t->key_didSetup(); break;
         case 4: *reinterpret_cast<QString*>(_v) = _t->key_isVisible(); break;
         case 5: *reinterpret_cast<QString*>(_v) = _t->key_none(); break;
+        case 6: *reinterpret_cast<QString*>(_v) = _t->key_saveString(); break;
+        case 7: *reinterpret_cast<QString*>(_v) = _t->key_shouldSavaTasks(); break;
+        case 8: *reinterpret_cast<QString*>(_v) = _t->key_taskTitle(); break;
+        case 9: *reinterpret_cast<QString*>(_v) = _t->key_tasks(); break;
         default: break;
         }
     }
@@ -197,7 +213,7 @@ int FObj::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
             || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty
             || _c == QMetaObject::RegisterPropertyMetaType) {
         qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 10;
     }
     return _id;
 }

@@ -34,7 +34,7 @@
                             "column": 19,
                             "durationMicroseconds": 0,
                             "functionName": "text",
-                            "line": 24,
+                            "line": 21,
                             "message": "Could not find property \"text\"."
                         },
                         {
@@ -42,7 +42,7 @@
                             "column": 28,
                             "durationMicroseconds": 0,
                             "functionName": "onTextChanged",
-                            "line": 27,
+                            "line": 22,
                             "message": "Could not find signal \"textChanged\"."
                         },
                         {
@@ -50,15 +50,15 @@
                             "column": 25,
                             "durationMicroseconds": 0,
                             "functionName": "onAccepted",
-                            "line": 31,
+                            "line": 26,
                             "message": "Could not find signal \"accepted\"."
                         },
                         {
                             "codegenResult": 0,
                             "column": 31,
-                            "durationMicroseconds": 1000,
+                            "durationMicroseconds": 0,
                             "functionName": "alignment",
-                            "line": 19,
+                            "line": 18,
                             "message": ""
                         }
                     ],

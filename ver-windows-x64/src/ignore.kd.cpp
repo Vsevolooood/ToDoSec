@@ -33,27 +33,45 @@ void API::mainSet(const QString &key, const QVariant &value) {
     }
 }
 
-bool MainContext::didClickChangeText() {
-    return KT.MainContext.get_didClickChangeText(ctx);
+bool MainContext::didClickSaveText() {
+    return KT.MainContext.get_didClickSaveText(ctx);
 }
 
 bool MainContext::didLaunch() {
     return KT.MainContext.get_didLaunch(ctx);
 }
 
-bool MainContext::didSetup() {
-    return KT.MainContext.get_didSetup(ctx);
-}
-
-QString MainContext::greetingText() const & {
-    const char *raw = KT.MainContext.get_greetingText(ctx);
+QString MainContext::didSelectTask() const & {
+    const char *raw = KT.MainContext.get_didSelectTask(ctx);
     QString str(raw);
     KTSym->DisposeString(raw);
     return str;
 }
 
+bool MainContext::didSetup() {
+    return KT.MainContext.get_didSetup(ctx);
+}
+
 bool MainContext::isVisible() {
     return KT.MainContext.get_isVisible(ctx);
+}
+
+QString MainContext::saveString() const & {
+    const char *raw = KT.MainContext.get_saveString(ctx);
+    QString str(raw);
+    KTSym->DisposeString(raw);
+    return str;
+}
+
+bool MainContext::shouldSavaTasks() {
+    return KT.MainContext.get_shouldSavaTasks(ctx);
+}
+
+QString MainContext::taskTitle() const & {
+    const char *raw = KT.MainContext.get_taskTitle(ctx);
+    QString str(raw);
+    KTSym->DisposeString(raw);
+    return str;
 }
 
 std::vector<std::any> MainEffectRegistry::_items;

@@ -24,7 +24,11 @@ Rectangle {
             }
 
             onAccepted: {
-                api.mainSet(F.didClickSaveText, true)
+                onAccepted: {
+                    api.mainSet(F.didClickSaveText, true)
+
+                    console.log(vm.tasks)
+                }
             }
         }
     }
