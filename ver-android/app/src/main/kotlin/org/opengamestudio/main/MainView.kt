@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -25,31 +26,36 @@ fun MainView(
         exit = fadeOut(),
         modifier = modifier
     ) {
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(16.dp)
-        ) {
-            OutlinedTextField(
-                value = vm.mainTaskTitle.value,
-                onValueChange = {
-                    mainSet(F.taskTitle, it)
-                },
-                label = {
-                    Text("Задача")
-                },
-                singleLine = true,
-                modifier = Modifier.fillMaxWidth(),
-                keyboardOptions = androidx.compose.foundation.text.KeyboardOptions(
-                    imeAction = ImeAction.Done
-                ),
-                keyboardActions = androidx.compose.foundation.text.KeyboardActions(
-                    onDone = {
-                        mainSet(F.didClickSaveText, true)
-                    }
+        Scaffold(
+            modifier = Modifier.fillMaxSize()
+        ) { paddingValues ->
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(paddingValues)
+                    .padding(16.dp)
+            ) {
+                OutlinedTextField(
+                    value = vm.mainTaskTitle.value,
+                    onValueChange = {
+                        mainSet(F.taskTitle, it)
+                    },
+                    label = {
+                        Text("Задача")
+                    },
+                    singleLine = true,
+                    modifier = Modifier.fillMaxWidth(),
+                    keyboardOptions = androidx.compose.foundation.text.KeyboardOptions(
+                        imeAction = ImeAction.Done
+                    ),
+                    keyboardActions = androidx.compose.foundation.text.KeyboardActions(
+                        onDone = {
+                            mainSet(F.didClickSaveText, true)
+                        }
+                    )
                 )
-            )
 
+            }
         }
     }
 }
